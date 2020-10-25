@@ -9,3 +9,15 @@ react learning examples
 
 # 2.jsx
 jsx的描述
+
+# 3.props
+传入对象，组件嵌套
+
+# 4.setinterrender
+定时重新渲染。
+
+# 5.handlevents
+
+# 6.if...else
+
+# 7.map,key

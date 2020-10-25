@@ -1,17 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
+function Avatar(props) {
+  return (
+    <img className="Avatar"
+      src={props.user.avatarUrl}
+    />
+  );
+}
+
+function Comment(props) {
+  return (
+    <div>
+      <Avatar user={props.author} />
+      <div>
+        {props.author.name}
+      </div>
+    </div>
+  );
+}
+//React 会将以小写字母开头的组件视为原生 DOM 标签
+//props一般不可更改
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Comment author={{name:'jay', avatarUrl:'baidu.com'}} />,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
